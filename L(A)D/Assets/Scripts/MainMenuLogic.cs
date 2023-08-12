@@ -20,9 +20,17 @@ public class MainMenuLogic : MonoBehaviour
     private GameObject MainMenuLight;
     [SerializeField]
     private GameObject AnimationLight;
+    [HideInInspector]
+    private bool LightTheme = false;
     private void Start()
     {
-        
+        if (!PlayerPrefs.HasKey(PlayerPrefsConstants.Theme))
+        {
+            PlayerPrefs.SetInt(PlayerPrefsConstants.Theme, 0);
+            PlayerPrefs.Save();
+        }
+        else if (PlayerPrefs.GetInt(PlayerPrefsConstants.Theme) > 0)
+            LightTheme = true;
     }
     public void OnNewGameClick()
     {
