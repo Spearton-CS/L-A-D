@@ -20,7 +20,6 @@ public class MainMenuLogic : MonoBehaviour
     private GameObject MainMenuLight;
     [SerializeField]
     private GameObject AnimationLight;
-    [HideInInspector]
     private bool LightTheme = false;
     private void Start()
     {
