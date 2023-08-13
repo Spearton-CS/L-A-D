@@ -1,32 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class UIOnClick : MonoBehaviour
 {
     [SerializeField]
-    private MainMenuLogic logic;
+    private MainMenuLogic Logic;
     [SerializeField]
-    private int f;
-
+    private int F;
     private void OnMouseDown()
     {
-        switch (f)
+        switch (F)
         {
             case 0:
-                logic.OnNewGameClick();
+                Logic.OnNewGameClick();
                 break;
             case 1:
-                logic.OnSettingsClick();
+                Logic.OnSettingsClick();
                 break;
             case 2:
-                logic.OnExitNewGameClick();
+                Logic.OnExitNewGameClick();
                 break;
             case 3:
-                logic.OnExitSettingsClick();
+                Logic.OnExitSettingsClick();
                 break;
             default:
-                logic.OnExitClick();
+                Logic.OnExitClick();
                 break;
         }
     }

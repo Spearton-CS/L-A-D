@@ -8,14 +8,15 @@ TagManager:
   - BottomBorder
   - LeftBorder
   - RightBorder
+  - Missile
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Arena Border
   - Water
   - UI
-  - 
+  - Enemy
   - 
   - 
   - 

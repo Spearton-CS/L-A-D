@@ -24,11 +24,11 @@ public class BordersLogic : MonoBehaviour
                 x -= 2;
                 break;
             default:
-                Debug.LogError("Unsupported object tag");
+                Debug.LogError("Unsupported object tag; All actions skipped");
                 break;
         }
         collider.transform.position = new(x, y, collider.transform.position.z);
-        collider.gameObject.GetComponent<PlayerLogic>().Damage(Damage);
+        collider.gameObject.GetComponent<PlayerLogic>().Attack(Damage);
         _ = x;
         _ = y;
     }

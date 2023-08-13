@@ -256,7 +256,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2253911629886400664, guid: 0bc06f64decba2e4c979ee11fda61a0d, type: 3}
       propertyPath: m_Name
-      value: ShowBlack
+      value: Show
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 0bc06f64decba2e4c979ee11fda61a0d, type: 3}
       propertyPath: m_LocalScale.x
@@ -454,8 +454,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19118dada8b05a4c989df93b8f2d56d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logic: {fileID: 2092405396}
-  f: 0
+  Logic: {fileID: 2092405396}
+  F: 0
 --- !u!1 &887033207 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: 0bc06f64decba2e4c979ee11fda61a0d, type: 3}
@@ -754,8 +754,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19118dada8b05a4c989df93b8f2d56d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logic: {fileID: 2092405396}
-  f: 1
+  Logic: {fileID: 2092405396}
+  F: 1
 --- !u!1 &1956820030
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,10 +874,6 @@ MonoBehaviour:
   SettingsMenu: {fileID: 506571121}
   MainMenu: {fileID: 1626975770}
   Animation: {fileID: 887033207}
-  NewGameMenuLight: {fileID: 0}
-  SettingsMenuLight: {fileID: 0}
-  MainMenuLight: {fileID: 0}
-  AnimationLight: {fileID: 0}
 --- !u!4 &2092405397
 Transform:
   m_ObjectHideFlags: 0

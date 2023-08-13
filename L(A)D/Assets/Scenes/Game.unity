@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 53368762}
   - component: {fileID: 53368765}
   - component: {fileID: 53368764}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LeftBorder
   m_TagString: LeftBorder
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 865496586}
   - component: {fileID: 865496588}
   - component: {fileID: 865496587}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TopBorder
   m_TagString: TopBorder
   m_Icon: {fileID: 0}
@@ -423,7 +423,7 @@ GameObject:
   - component: {fileID: 928864478}
   - component: {fileID: 928864481}
   - component: {fileID: 928864480}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BottomBorder
   m_TagString: BottomBorder
   m_Icon: {fileID: 0}
@@ -948,6 +948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 100
   Speed: 15
+  Damage: 20
 --- !u!50 &1251602847
 Rigidbody2D:
   serializedVersion: 4
@@ -987,7 +988,7 @@ GameObject:
   - component: {fileID: 1774816406}
   - component: {fileID: 1774816409}
   - component: {fileID: 1774816408}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RightBorder
   m_TagString: RightBorder
   m_Icon: {fileID: 0}
