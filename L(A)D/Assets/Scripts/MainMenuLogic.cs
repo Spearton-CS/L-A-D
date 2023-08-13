@@ -12,6 +12,9 @@ public class MainMenuLogic : MonoBehaviour
     private GameObject MainMenu;
     [SerializeField]
     private GameObject Animation;
+    private float AnimCD = 0f;
+    private int AnimState = 0;
+    private int nowClick = 0;
     [SerializeField]
     private GameObject NewGameMenuLight;
     [SerializeField]
@@ -31,29 +34,77 @@ public class MainMenuLogic : MonoBehaviour
         else if (PlayerPrefs.GetInt(PlayerPrefsConstants.Theme) > 0)
             LightTheme = true;
     }
-    public void OnNewGameClick()
+
+    private void Update()
     {
-        MainMenu.SetActive(false);
-        //Анимация перехода
-        NewGameMenu.SetActive(true);
+        if(AnimState == 1)
+        {
+            if(AnimCD > 0f)
+                AnimCD -=Time.deltaTime;
+            else
+            {
+                AnimCD = 0.5f;
+                AnimState = 2;
+                switch (nowClick)
+                {
+                    case 0:
+                        MainMenu.SetActive(false);
+                        NewGameMenu.SetActive(true);
+                        break;
+                    case 1:
+                        MainMenu.SetActive(false);
+                        SettingsMenu.SetActive(true);
+                        break;
+                    case 2:
+                        MainMenu.SetActive(true);
+                        NewGameMenu.SetActive(false);
+                        break;
+                    default:
+                        MainMenu.SetActive(true);
+                        SettingsMenu.SetActive(false);
+                        break;
+                }
+            }
+            Animation.transform.position = new Vector3(-5000 + (1 - AnimCD / 0.5f) * 8000, -1000, -9);
+        }
+        else if(AnimState == 2)
+        {
+            if (AnimCD > 0f)
+                AnimCD -= Time.deltaTime;
+            else
+            {
+                AnimCD = 0f;
+                AnimState = 0;
+            }
+            Animation.transform.position = new Vector3(3000 - (1 - AnimCD / 0.5f) * 8000, -1000, -9);
+        }
+        
     }
-    public void OnSettingsClick()
+
+    public void OnNewGameClick() // 0
     {
-        MainMenu.SetActive(false);
-        //Анимация перехода
-        SettingsMenu.SetActive(true);
+        AnimCD = 0.5f;
+        AnimState = 1;
+        nowClick = 0;
     }
-    public void OnExitNewGameClick()
+    public void OnSettingsClick() // 1
     {
-        NewGameMenu.SetActive(false);
-        //Анимация перехода
-        MainMenu.SetActive(true);
+        AnimCD = 0.5f;
+        AnimState = 1;
+        nowClick = 1;
     }
-    public void OnExitSettingsClick()
+    public void OnExitNewGameClick() // 2
     {
-        SettingsMenu.SetActive(false);
-        //Анимация перехода
-        MainMenu.SetActive(true);
+        AnimCD = 0.5f;
+        AnimState = 1;
+        nowClick = 2;
     }
-    public void OnExitClick() => Application.Quit();
+    public void OnExitSettingsClick() // 3
+    {
+        AnimCD = 0.5f;
+        AnimState = 1;
+        nowClick = 3;
+    }
+
+    public void OnExitClick() => Application.Quit(); // 4
 }
