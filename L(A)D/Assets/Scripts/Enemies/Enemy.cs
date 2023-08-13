@@ -26,10 +26,17 @@ namespace Enemies
         [SerializeField]
         private protected float DamageRange;
         #endregion
+        private protected Rigidbody2D Body;
         [SerializeField]
         private protected readonly Animators.EnemyAnimator Animator;
         [SerializeField]
         private protected readonly GameObject Player;
+        private protected void InternalStart() { }
+        private void Start()
+        {
+            Body = GetComponent<Rigidbody2D>();
+            InternalStart();
+        }
         #region Attack & Heal
         public void Attack(float dmg)
         {
@@ -57,6 +64,10 @@ namespace Enemies
             else
                 CustomOnCollisionEnter2D(collision);
         }
+        #endregion
+        #region Movement
+        private protected virtual void GoToPlayer() => Body.velocity = new(Mathf.Sign(Player.transform.position.x - transform.position.x) * Speed, Mathf.Sign(Player.transform.position.y - transform.position.y) * Speed);
+        private protected virtual void GoFromPlayer() => Body.velocity = new(-Mathf.Sign(Player.transform.position.x - transform.position.x) * Speed, -Mathf.Sign(Player.transform.position.y - transform.position.y) * Speed);
         #endregion
     }
 }

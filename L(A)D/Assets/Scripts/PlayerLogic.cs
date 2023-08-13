@@ -1,7 +1,12 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerLogic : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject Menu;
+    [SerializeField]
+    private GameObject Game;
     private Animator Anim;
     private Rigidbody2D Body;
     private float Health;
@@ -33,7 +38,7 @@ public class PlayerLogic : MonoBehaviour
     {
         //Before
         Destroy(gameObject);
-        //After
+        SceneManager.LoadScene("MainMenu");
     }
     private void Start()
     {
@@ -43,8 +48,15 @@ public class PlayerLogic : MonoBehaviour
     }
     private void Update()
     {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Game.SetActive(!Game.activeSelf);
+            Menu.SetActive(!Menu.activeSelf);
+            Time.timeScale = 0;
+            return;
+        }
         float h = Input.GetAxis("Horizontal"), v = Input.GetAxis("Vertical");
-        Body.velocity = new Vector2(h * Speed, v * Speed);
+        Body.velocity = new(h * Speed, v * Speed);
         if(!(Mathf.Abs(h) < 0.2 && Mathf.Abs(v) < 0.2))
             if (Mathf.Abs(h) < Mathf.Abs(v))
                 if (v < 0)

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public sealed class Missile : Enemies.Enemy
+public class Missile : Enemies.Enemy
 {
     /// <summary>if nearest than zero calculates range by object size</summary>
     [SerializeField]

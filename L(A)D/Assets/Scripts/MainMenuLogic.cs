@@ -1,9 +1,8 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuLogic : MonoBehaviour
 {
-    [SerializeField]
-    private Camera Camera;
     [SerializeField]
     private GameObject NewGameMenu;
     [SerializeField]
@@ -29,7 +28,8 @@ public class MainMenuLogic : MonoBehaviour
                 {
                     case 0:
                         MainMenu.SetActive(false);
-                        NewGameMenu.SetActive(true);
+                        SceneManager.LoadScene("Game"); //Redact later...
+                        //NewGameMenu.SetActive(true);
                         break;
                     case 1:
                         MainMenu.SetActive(false);

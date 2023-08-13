@@ -66,9 +66,11 @@
     <Compile Include="Assets\Scripts\Enemies\Animators\EnemyAnimator.cs" />
     <Compile Include="Assets\Scripts\Enemies\Missile.cs" />
     <Compile Include="Assets\Scripts\Enemies\RangedCombatEnemy.cs" />
+    <Compile Include="Assets\Scripts\MenuLogic.cs" />
+    <Compile Include="Assets\Scripts\MenuUIOnClick.cs" />
     <Compile Include="Assets\Scripts\PlayerLogic.cs" />
     <Compile Include="Assets\Scripts\MainMenuLogic.cs" />
-    <Compile Include="Assets\Scripts\UIOnClick.cs" />
+    <Compile Include="Assets\Scripts\MainMenuUIOnClick.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
