@@ -941,7 +941,6 @@ GameObject:
   - component: {fileID: 1105542188}
   - component: {fileID: 1105542187}
   - component: {fileID: 1105542189}
-  - component: {fileID: 1105542190}
   m_Layer: 0
   m_Name: Arena
   m_TagString: Untagged
@@ -1041,23 +1040,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1105542190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105542186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30eb6537bcc6c8c42a37e3d64976e915, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 20
-  MaxHealth: 20
-  Damage: 5
-  Speed: 10
-  DamageRange: 5
 --- !u!1 &1251602841 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3419140243909830843, guid: 22d7bc5f914cc34488505372ef1c04b8, type: 3}
@@ -1545,9 +1527,49 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1332434637}
     m_Modifications:
+    - target: {fileID: 887276274295895934, guid: 22d7bc5f914cc34488505372ef1c04b8, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3419140243909830843, guid: 22d7bc5f914cc34488505372ef1c04b8, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419140243909830843, guid: 22d7bc5f914cc34488505372ef1c04b8, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5122285983109063937, guid: 22d7bc5f914cc34488505372ef1c04b8, type: 3}
+      propertyPath: m_Points.Array.data[9].x
+      value: 0.47171772
+      objectReference: {fileID: 0}
+    - target: {fileID: 5122285983109063937, guid: 22d7bc5f914cc34488505372ef1c04b8, type: 3}
+      propertyPath: m_Points.Array.data[9].y
+      value: -1.7289062
+      objectReference: {fileID: 0}
+    - target: {fileID: 5122285983109063937, guid: 22d7bc5f914cc34488505372ef1c04b8, type: 3}
+      propertyPath: m_Points.Array.data[10].x
+      value: -0.056512088
+      objectReference: {fileID: 0}
+    - target: {fileID: 5122285983109063937, guid: 22d7bc5f914cc34488505372ef1c04b8, type: 3}
+      propertyPath: m_Points.Array.data[10].y
+      value: -1.7181367
+      objectReference: {fileID: 0}
+    - target: {fileID: 5122285983109063937, guid: 22d7bc5f914cc34488505372ef1c04b8, type: 3}
+      propertyPath: m_Points.Array.data[11].x
+      value: -0.48361748
+      objectReference: {fileID: 0}
+    - target: {fileID: 5122285983109063937, guid: 22d7bc5f914cc34488505372ef1c04b8, type: 3}
+      propertyPath: m_Points.Array.data[11].y
+      value: -1.7254418
+      objectReference: {fileID: 0}
+    - target: {fileID: 5122285983109063937, guid: 22d7bc5f914cc34488505372ef1c04b8, type: 3}
+      propertyPath: m_Points.Array.data[12].x
+      value: -0.5116813
+      objectReference: {fileID: 0}
+    - target: {fileID: 5122285983109063937, guid: 22d7bc5f914cc34488505372ef1c04b8, type: 3}
+      propertyPath: m_Points.Array.data[12].y
+      value: -1.5560718
       objectReference: {fileID: 0}
     - target: {fileID: 7137316263644647964, guid: 22d7bc5f914cc34488505372ef1c04b8, type: 3}
       propertyPath: Game
@@ -1653,6 +1675,14 @@ PrefabInstance:
     - target: {fileID: 6932826419648235154, guid: e7556de003291e849855dc774b14a9a8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939487566500313429, guid: e7556de003291e849855dc774b14a9a8, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939487566500313429, guid: e7556de003291e849855dc774b14a9a8, type: 3}
+      propertyPath: m_BodyType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
