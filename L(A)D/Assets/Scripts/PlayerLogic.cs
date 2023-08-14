@@ -55,20 +55,6 @@ public class PlayerLogic : MonoBehaviour
             Time.timeScale = 0;
             return;
         }
-        float h = Input.GetAxis("Horizontal"), v = Input.GetAxis("Vertical");
-        Body.velocity = new(h * Speed, v * Speed);
-        if(!(Mathf.Abs(h) < 0.2 && Mathf.Abs(v) < 0.2))
-            if (Mathf.Abs(h) < Mathf.Abs(v))
-                if (v < 0)
-                    Anim.SetInteger("State", 0);
-                else
-                    Anim.SetInteger("State", 2);
-            else
-            {
-                Anim.SetInteger("State", 1);
-                transform.localScale = new Vector3(Mathf.Sign(h) * -1, 1, 1);
-            }
-        _ = h;
-        _ = v;
+        Body.velocity = new(Input.GetAxis("Horizontal") * Speed, Input.GetAxis("Vertical") * Speed);
     }
 }
