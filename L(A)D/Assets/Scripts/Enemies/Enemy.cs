@@ -27,14 +27,14 @@ namespace Enemies
         private protected float DamageRange;
         #endregion
         private protected Rigidbody2D Body;
-        [SerializeField]
-        private protected readonly Animators.EnemyAnimator Animator;
+        private protected Animator anim;
         [SerializeField]
         private protected readonly GameObject Player;
         private protected void InternalStart() { }
         private void Start()
         {
             Body = GetComponent<Rigidbody2D>();
+            anim = GetComponent<Animator>();
             InternalStart();
         }
         #region Attack & Heal

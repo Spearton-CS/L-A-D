@@ -48,6 +48,7 @@ public class MainMenuLogic : MonoBehaviour
             Animation.transform.position = new(-5000 + (1 - AnimCD / 0.5f) * 8000, -1000, -9);
         }
         else if (AnimState == 2)
+        {
             if (AnimCD > 0f)
                 AnimCD -= Time.deltaTime;
             else
@@ -56,6 +57,8 @@ public class MainMenuLogic : MonoBehaviour
                 AnimState = 0;
             }
             Animation.transform.position = new(3000 - (1 - AnimCD / 0.5f) * 8000, -1000, -9);
+        }    
+            
     }
     public void OnNewGameClick() // 0
     {
