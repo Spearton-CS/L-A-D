@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5122285983109063937}
   - component: {fileID: 7342392796136854106}
   - component: {fileID: 7137316263644647964}
+  - component: {fileID: -1567425756786852033}
   - component: {fileID: 887276274295895934}
   m_Layer: 0
   m_Name: Player
@@ -179,6 +180,18 @@ MonoBehaviour:
   MaxHealth: 100
   Speed: 15
   Damage: 20
+--- !u!114 &-1567425756786852033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3419140243909830843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a153e26f610fec241ab441bf49774bdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &887276274295895934
 Rigidbody2D:
   serializedVersion: 4

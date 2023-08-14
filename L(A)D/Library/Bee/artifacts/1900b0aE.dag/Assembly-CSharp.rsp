@@ -384,6 +384,7 @@
 "Assets/Scripts/MenuAnimation.cs"
 "Assets/Scripts/MenuLogic.cs"
 "Assets/Scripts/MenuUIOnClick.cs"
+"Assets/Scripts/ObjectAnimations.cs"
 "Assets/Scripts/PlayerLogic.cs"
 -langversion:9.0
 

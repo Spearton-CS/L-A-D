@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\MenuLogic.cs" />
     <Compile Include="Assets\Scripts\Enemies\CloseCombatEnemy.cs" />
     <Compile Include="Assets\Scripts\Enemies\Missile.cs" />
+    <Compile Include="Assets\Scripts\ObjectAnimations.cs" />
     <Compile Include="Assets\Scripts\PlayerLogic.cs" />
     <Compile Include="Assets\Scripts\MenuUIOnClick.cs" />
     <Compile Include="Assets\Scripts\MainMenuLogic.cs" />
