@@ -9,7 +9,7 @@ public class PlayerLogic : MonoBehaviour
     private GameObject Game;
     private Animator Anim;
     private Rigidbody2D Body;
-    private float Health;
+    public float Health;
     [SerializeField]
     private float MaxHealth = 100;
     [SerializeField]

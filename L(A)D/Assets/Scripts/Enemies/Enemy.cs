@@ -25,6 +25,7 @@ namespace Enemies
         private protected float Speed;
         [SerializeField]
         private protected float DamageRange;
+        private protected float damageCD = 0.7f;
         #endregion
         private protected Rigidbody2D Body;
 <<<<<<< HEAD
