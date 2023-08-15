@@ -14,6 +14,8 @@ public class MenuLogic : MonoBehaviour
     }
     public void OnGoBackClick() //1
     {
+        Game.SetActive(true);
+        Menu.SetActive(false);
         Time.timeScale = 1;
     }
     public void OnExitClick() => Application.Quit(); //2

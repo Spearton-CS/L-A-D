@@ -382,7 +382,6 @@
 "Assets/Scripts/EnemyAnimation.cs"
 "Assets/Scripts/MainMenuLogic.cs"
 "Assets/Scripts/MainMenuUIOnClick.cs"
-"Assets/Scripts/MenuAnimation.cs"
 "Assets/Scripts/MenuLogic.cs"
 "Assets/Scripts/MenuUIOnClick.cs"
 "Assets/Scripts/PlayerAnimations.cs"

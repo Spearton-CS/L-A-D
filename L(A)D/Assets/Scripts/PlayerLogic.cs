@@ -50,8 +50,8 @@ public class PlayerLogic : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Escape))
         {
-            Game.SetActive(!Game.activeSelf);
-            Menu.SetActive(!Menu.activeSelf);
+            Game.SetActive(false);
+            Menu.SetActive(true);
             Time.timeScale = 0;
             return;
         }
