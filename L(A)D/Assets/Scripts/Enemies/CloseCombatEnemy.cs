@@ -5,26 +5,27 @@ namespace Enemies
     /// <summary>Base (NON-ABSTRACT!!!) class for enemy in close combat</summary>
     public class CloseCombatEnemy : Enemy
     {
+        
         private void Update()
         {
-            Vector3 ppos = Player.transform.position;
-            Vector3 pos = transform.position;
-            GoToPlayer();
-            if (DamageCD == 1f)
+            if (Vector2.Distance(Player.transform.position, transform.position) < (Coll.size.x + Coll.size.y) / 2 + DamageRange / 10)
+                GoFromPlayer();
+            else
+                GoToPlayer();
+            if (DamageCD == 1f && canAttack(7))
             {
-                if (Mathf.Sqrt((ppos.x - pos.x) * (ppos.x - pos.x) + (ppos.y - pos.y) * (ppos.y - pos.y)) < DamageRange / 10 + 0.7f)
-                {
-                    Player.GetComponent<PlayerLogic>().Attack(Damage);
-                    GoFromPlayer();
-                } 
+                Player.GetComponent<PlayerLogic>().Attack(Damage);
+                Anim.SetBool("Punch", true);
                 DamageCD -= Time.deltaTime;
             }
             else if (DamageCD > 0)
+            {
+                Anim.SetBool("Punch", false);
                 DamageCD -= Time.deltaTime;
+            }
             else
                 DamageCD = 1f;
-            _ = ppos;
-            _ = pos;
+            Body.velocity = Vector3.zero;
         }
     }
 }

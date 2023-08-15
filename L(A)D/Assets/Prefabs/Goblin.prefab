@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2848027010945529121}
   - component: {fileID: 360778723741696521}
   - component: {fileID: 8939487566500313429}
-  - component: {fileID: 588009775578106819}
   - component: {fileID: 1494626664163899210}
+  - component: {fileID: 6284804583935018461}
   m_Layer: 0
   m_Name: Goblin
   m_TagString: Untagged
@@ -78,12 +78,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1786911760, guid: 360d8432809fa4440981e9508d7ec43d, type: 3}
+  m_Sprite: {fileID: 217593121, guid: 4dc4f9dbd83e6a044862db14d3f81d74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.6, y: 2.4}
+  m_Size: {x: 1.6, y: 2.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -172,18 +172,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &588009775578106819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6390720151807803159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a153e26f610fec241ab441bf49774bdd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1494626664163899210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,3 +189,15 @@ MonoBehaviour:
   Damage: 5
   Speed: 10
   DamageRange: 5
+--- !u!114 &6284804583935018461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6390720151807803159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b8f1dd34f61f44995ff46cd21fde19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

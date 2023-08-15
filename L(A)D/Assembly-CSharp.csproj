@@ -62,15 +62,16 @@
     <Compile Include="Assets\Scripts\MenuLogic.cs" />
     <Compile Include="Assets\Scripts\Enemies\CloseCombatEnemy.cs" />
     <Compile Include="Assets\Scripts\Enemies\Missile.cs" />
-    <Compile Include="Assets\Scripts\ObjectAnimations.cs" />
     <Compile Include="Assets\Scripts\PlayerLogic.cs" />
     <Compile Include="Assets\Scripts\MenuUIOnClick.cs" />
     <Compile Include="Assets\Scripts\MainMenuLogic.cs" />
     <Compile Include="Assets\Scripts\MainMenuUIOnClick.cs" />
     <Compile Include="Assets\Scripts\BordersLogic.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
+    <Compile Include="Assets\Scripts\PlayerAnimations.cs" />
     <Compile Include="Assets\Scripts\Enemies\RangedCombatEnemy.cs" />
     <Compile Include="Assets\Scripts\CameraHandler.cs" />
+    <Compile Include="Assets\Scripts\EnemyAnimation.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -28,17 +28,23 @@ namespace Enemies
         private protected float DamageCD = 0.7f;
         #endregion
         private protected Rigidbody2D Body;
+        private protected CapsuleCollider2D Coll;
         private protected Animator Anim;
         private protected GameObject Player;
         private protected void InternalStart() { }
         private void Start()
         {
             Body = GetComponent<Rigidbody2D>();
+            Coll = GetComponent<CapsuleCollider2D>();
             Anim = GetComponent<Animator>();
             Player = GameObject.FindGameObjectWithTag("Player");
             InternalStart();
         }
         #region Attack & Heal
+        public bool canAttack(LayerMask mask)
+        {
+            return DamageRange/10 + (Coll.size.x + Coll.size.y)/2 + 0.7f >= Vector2.Distance(transform.position, Player.transform.position);
+        }
         public void Attack(float dmg)
         {
             if (dmg <= 0)
@@ -67,8 +73,8 @@ namespace Enemies
         }
         #endregion
         #region Movement
-        private protected virtual void GoToPlayer() => Body.velocity = new(Mathf.Sign(Player.transform.position.x - transform.position.x) * Speed, Mathf.Sign(Player.transform.position.y - transform.position.y) * Speed);
-        private protected virtual void GoFromPlayer() => Body.velocity = new(-Mathf.Sign(Player.transform.position.x - transform.position.x) * Speed, -Mathf.Sign(Player.transform.position.y - transform.position.y) * Speed);
+        private protected virtual void GoToPlayer() => transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, Speed * Time.deltaTime);
+        private protected virtual void GoFromPlayer() =>  transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, -Speed * Time.deltaTime);
         #endregion
     }
 }
