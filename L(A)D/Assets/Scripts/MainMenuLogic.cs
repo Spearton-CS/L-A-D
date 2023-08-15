@@ -57,8 +57,7 @@ public class MainMenuLogic : MonoBehaviour
                 AnimState = 0;
             }
             Animation.transform.position = new(3000 - (1 - AnimCD / 0.5f) * 8000, -1000, -9);
-        }    
-            
+        }
     }
     public void OnNewGameClick() // 0
     {
