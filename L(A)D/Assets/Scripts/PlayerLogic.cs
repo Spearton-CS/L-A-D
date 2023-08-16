@@ -16,6 +16,11 @@ public class PlayerLogic : MonoBehaviour
     private float Speed = 1.5F;
     [SerializeField]
     private float Damage = 20;
+    [SerializeField]
+    private float DamageRange = 150;
+    [SerializeField]
+    private float DamageCD = 1.2f;
+    public float AttackRange => DamageRange;
     public void Attack(float dmg)
     {
         if (dmg <= 0)

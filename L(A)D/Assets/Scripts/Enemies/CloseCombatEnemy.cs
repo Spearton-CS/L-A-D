@@ -5,7 +5,6 @@ namespace Enemies
     /// <summary>Base (NON-ABSTRACT!!!) class for enemy in close combat</summary>
     public class CloseCombatEnemy : Enemy
     {
-        
         private void Update()
         {
             if (Vector2.Distance(Player.transform.position, transform.position) < (Coll.size.x + Coll.size.y) / 2 + DamageRange / 10)
