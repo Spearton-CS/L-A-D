@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections.Generic;
 
 public class PlayerLogic : MonoBehaviour
 {
@@ -8,13 +7,20 @@ public class PlayerLogic : MonoBehaviour
     private GameObject Menu;
     [SerializeField]
     private GameObject Game;
+    private Animator Anim;
     private Rigidbody2D Body;
     public float Health;
-    public float SpellCD = 2f;
-    public float MaxHealth = 100;
-    public float Speed = 15F;
-
-    public Dictionary<GameObject, int> spells = new();
+    [SerializeField]
+    private float MaxHealth = 100;
+    [SerializeField]
+    private float Speed = 1.5F;
+    [SerializeField]
+    private float Damage = 20;
+    [SerializeField]
+    private float DamageRange = 150;
+    [SerializeField]
+    private float DamageCD = 1.2f;
+    public float AttackRange => DamageRange;
     public void Attack(float dmg)
     {
         if (dmg <= 0)
@@ -35,13 +41,13 @@ public class PlayerLogic : MonoBehaviour
     }
     private void Die()
     {
-        //Before
         Destroy(gameObject);
         SceneManager.LoadScene("MainMenu");
     }
     private void Start()
     {
         Body = GetComponent<Rigidbody2D>();
+        Anim = GetComponent<Animator>();
         Health = MaxHealth;
     }
     private void Update()
@@ -53,6 +59,15 @@ public class PlayerLogic : MonoBehaviour
             Time.timeScale = 0;
             return;
         }
+        /*
+         * Логика авто-стрельбы:
+         * 
+         * 1. Чекнуть кд
+         * 
+         * 2. Чекнуть есть ли в радиусе бляди
+         * 
+         * 3. Стрелять
+         */
         Body.velocity = new(Input.GetAxis("Horizontal") * Speed, Input.GetAxis("Vertical") * Speed);
     }
 }

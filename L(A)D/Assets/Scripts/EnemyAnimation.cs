@@ -1,18 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyAnimation : MonoBehaviour
 {
-    private Transform player;
-
+    private Transform Player;
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        Player = GameObject.FindGameObjectWithTag("Player").transform;
     }
     private void Update()
     {
-        if (player.position.x < transform.position.x)
+        if (Player.position.x < transform.position.x)
             transform.localScale = new(1, 1, 1);
         else
             transform.localScale = new(-1, 1, 1);

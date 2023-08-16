@@ -18,5 +18,5 @@ public class MenuLogic : MonoBehaviour
         Menu.SetActive(false);
         Time.timeScale = 1;
     }
-    public void OnExitClick() => Application.Quit(); //2
+    public void OnExitClick() => Application.Quit(); //2+
 }

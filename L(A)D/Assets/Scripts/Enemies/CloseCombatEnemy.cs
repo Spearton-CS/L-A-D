@@ -1,29 +1,30 @@
 ﻿using UnityEngine;
 
-
-/// <summary>Base (NON-ABSTRACT!!!) class for enemy in close combat</summary>
-public class CloseCombatEnemy : Enemy
+namespace Enemies
 {
-        
-    private void Update()
+    /// <summary>Base (NON-ABSTRACT!!!) class for enemy in close combat</summary>
+    public class CloseCombatEnemy : Enemy
     {
-        if (Vector2.Distance(Player.transform.position, transform.position) < (Coll.size.x + Coll.size.y) / 2 + DamageRange / 10)
-            GoFromPlayer();
-        else
-            GoToPlayer();
-        if (DamageCD == 1f && canAttack(7))
+        private void Update()
         {
-            Player.GetComponent<PlayerLogic>().Attack(Damage);
-            Anim.SetBool("Punch", true);
-            DamageCD -= Time.deltaTime;
+            if (Vector2.Distance(Player.transform.position, transform.position) < (Coll.size.x + Coll.size.y) / 2 + DamageRange / 10)
+                GoFromPlayer();
+            else
+                GoToPlayer();
+            if (DamageCD == 1f && canAttack(7))
+            {
+                Player.GetComponent<PlayerLogic>().Attack(Damage);
+                Anim.SetBool("Punch", true);
+                DamageCD -= Time.deltaTime;
+            }
+            else if (DamageCD > 0)
+            {
+                Anim.SetBool("Punch", false);
+                DamageCD -= Time.deltaTime;
+            }
+            else
+                DamageCD = 1f;
+            Body.velocity = Vector3.zero;
         }
-        else if (DamageCD > 0)
-        {
-            Anim.SetBool("Punch", false);
-            DamageCD -= Time.deltaTime;
-        }
-        else
-            DamageCD = 1f;
-        Body.velocity = Vector3.zero;
     }
 }

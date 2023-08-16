@@ -17,9 +17,6 @@ public class MainMenuUIOnClick : MonoBehaviour
                 Logic.OnSettingsClick();
                 break;
             case 2:
-                Logic.OnExitNewGameClick();
-                break;
-            case 3:
                 Logic.OnExitSettingsClick();
                 break;
             default:
