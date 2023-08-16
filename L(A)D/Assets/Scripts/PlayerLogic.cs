@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class PlayerLogic : MonoBehaviour
 {
@@ -7,15 +8,13 @@ public class PlayerLogic : MonoBehaviour
     private GameObject Menu;
     [SerializeField]
     private GameObject Game;
-    private Animator Anim;
     private Rigidbody2D Body;
     public float Health;
-    [SerializeField]
-    private float MaxHealth = 100;
-    [SerializeField]
-    private float Speed = 1.5F;
-    [SerializeField]
-    private float Damage = 20;
+    public float SpellCD = 2f;
+    public float MaxHealth = 100;
+    public float Speed = 15F;
+
+    public Dictionary<GameObject, int> spells = new();
     public void Attack(float dmg)
     {
         if (dmg <= 0)
@@ -43,7 +42,6 @@ public class PlayerLogic : MonoBehaviour
     private void Start()
     {
         Body = GetComponent<Rigidbody2D>();
-        Anim = GetComponent<Animator>();
         Health = MaxHealth;
     }
     private void Update()

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7823255354033973731}
   - component: {fileID: 4824173680996247721}
   - component: {fileID: 874718563356418857}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GoblinSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}

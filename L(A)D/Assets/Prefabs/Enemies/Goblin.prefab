@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4354123521255024698}
   - component: {fileID: 6673559066529342800}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 8939487566500313429}
   - component: {fileID: 1494626664163899210}
   - component: {fileID: 6284804583935018461}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Goblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
