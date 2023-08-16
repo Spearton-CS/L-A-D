@@ -28,9 +28,9 @@ public class Missile : MonoBehaviour
             Anim.SetBool("IsDestroy", true);
             dieCD = 0.35f;
             if (go.tag == "Enemy")
-                go.GetComponent<CloseCombatEnemy>().Attack(Damage);
+                go.GetComponent<Enemies.CloseCombatEnemy>().Attack(Damage);
             else if (go.tag == "RangeEnemy")
-                go.GetComponent<RangedCombatEnemy>().Attack(Damage);
+                go.GetComponent<Enemies.RangedCombatEnemy>().Attack(Damage);
                
         }
         _ = go;

@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class GameLogic : MonoBehaviour
@@ -20,12 +18,10 @@ public class GameLogic : MonoBehaviour
     private PlayerLogic player;
     [SerializeField]
     private GameObject missile;
-
     private void Update()
     {
         cash.text = $"{Cash}";
     }
-
     public void UpgradeHealth()
     {
         if (LightCost[0] <= Cash)

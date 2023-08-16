@@ -10,16 +10,15 @@ public class PlayerLogic : MonoBehaviour
     private Animator Anim;
     private Rigidbody2D Body;
     public float Health;
-    [SerializeField]
-    private float MaxHealth = 100;
-    [SerializeField]
-    private float Speed = 1.5F;
+    public float MaxHealth = 100;
+    public float Speed = 1.5F;
     [SerializeField]
     private float Damage = 20;
     [SerializeField]
     private float DamageRange = 150;
     [SerializeField]
     private float DamageCD = 1.2f;
+    public float SpellCD;
     public float AttackRange => DamageRange;
     public void Attack(float dmg)
     {

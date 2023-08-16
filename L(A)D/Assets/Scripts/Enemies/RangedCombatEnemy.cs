@@ -22,7 +22,7 @@ namespace Enemies
             if (Vector2.Distance(ppos, pos) <= range)
             {
                 if (false == true) //Проверка кд...
-                    Fire(new());
+                    return;//Fire(new());
             }
             else //Поправить движение до радиуса...
             {
@@ -42,6 +42,6 @@ namespace Enemies
             _ = ppos;
             _ = pos;
         }
-        private void Fire(Vector3 pos) => Missile.Create(Missile.CreateArrow(pos)).Fire(Player);
+        //private void Fire(Vector3 pos) => Missile.Create(Missile.CreateArrow(pos)).Fire(Player);
     }
 }
