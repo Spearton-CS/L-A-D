@@ -12,7 +12,7 @@ public class GameLogic : MonoBehaviour
     private int[] LightCost = { 8, 9, 7, 6, 10 };
     [SerializeField]
     private GameObject[] LightPluses = new GameObject[5];
-    [SerializeField]                 
+    [SerializeField]
     private GameObject[] LightPrices = new GameObject[5];
     [SerializeField]
     private Text[] LightLvls = new Text[5];
@@ -28,7 +28,7 @@ public class GameLogic : MonoBehaviour
 
     public void UpgradeHealth()
     {
-        if(LightCost[0] <= Cash)
+        if (LightCost[0] <= Cash)
         {
             Cash -= LightCost[0];
             LightCost[0] *= Light[0] + 3;
@@ -38,8 +38,8 @@ public class GameLogic : MonoBehaviour
             LightPrices[0].GetComponent<Text>().text = $"Price: {LightCost[0]}";
             LightLvls[0].text = $"{Light[0]} LVL";
         }
-        if(Light[0] == 5)
-        { 
+        if (Light[0] == 5)
+        {
             LightPluses[0].SetActive(false);
             LightPrices[0].SetActive(false);
         }
