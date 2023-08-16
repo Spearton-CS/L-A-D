@@ -380,6 +380,7 @@
 "Assets/Scripts/Enemies/Missile.cs"
 "Assets/Scripts/Enemies/RangedCombatEnemy.cs"
 "Assets/Scripts/EnemyAnimation.cs"
+"Assets/Scripts/HistoryLogic.cs"
 "Assets/Scripts/MainMenuLogic.cs"
 "Assets/Scripts/MainMenuUIOnClick.cs"
 "Assets/Scripts/MenuLogic.cs"

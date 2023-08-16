@@ -28,8 +28,7 @@ public class MainMenuLogic : MonoBehaviour
                 {
                     case 0:
                         MainMenu.SetActive(false);
-                        SceneManager.LoadScene("Game"); //Redact later...
-                        //NewGameMenu.SetActive(true);
+                        SceneManager.LoadScene("History");
                         break;
                     case 1:
                         MainMenu.SetActive(false);
@@ -71,17 +70,11 @@ public class MainMenuLogic : MonoBehaviour
         AnimState = 1;
         NowClick = 1;
     }
-    public void OnExitNewGameClick() // 2
-    {
-        AnimCD = 0.5f;
-        AnimState = 1;
-        NowClick = 2;
-    }
-    public void OnExitSettingsClick() // 3
+    public void OnExitSettingsClick() // 2
     {
         AnimCD = 0.5f;
         AnimState = 1;
         NowClick = 3;
     }
-    public void OnExitClick() => Application.Quit(); // 4
+    public void OnExitClick() => Application.Quit(); // 3+
 }

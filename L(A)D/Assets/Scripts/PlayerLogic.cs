@@ -41,7 +41,6 @@ public class PlayerLogic : MonoBehaviour
     }
     private void Die()
     {
-        //Before
         Destroy(gameObject);
         SceneManager.LoadScene("MainMenu");
     }
@@ -60,6 +59,15 @@ public class PlayerLogic : MonoBehaviour
             Time.timeScale = 0;
             return;
         }
+        /*
+         * Логика авто-стрельбы:
+         * 
+         * 1. Чекнуть кд
+         * 
+         * 2. Чекнуть есть ли в радиусе бляди
+         * 
+         * 3. Стрелять
+         */
         Body.velocity = new(Input.GetAxis("Horizontal") * Speed, Input.GetAxis("Vertical") * Speed);
     }
 }

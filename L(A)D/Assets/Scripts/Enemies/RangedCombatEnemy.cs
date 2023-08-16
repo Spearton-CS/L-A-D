@@ -5,8 +5,6 @@ namespace Enemies
     /// <summary>Base (NON-ABSTRACT!!!) class for enemy in ranged combat</summary>
     public class RangedCombatEnemy : Enemy
     {
-        [SerializeField]
-        private protected readonly int MissileObjectIndex;
         private void Update()
         {
             /*
@@ -24,7 +22,7 @@ namespace Enemies
             if (Vector2.Distance(ppos, pos) <= range)
             {
                 if (false == true) //Проверка кд...
-                    Fire();
+                    Fire(new());
             }
             else //Поправить движение до радиуса...
             {
@@ -38,18 +36,12 @@ namespace Enemies
                 else
                     v += range;
                 Body.velocity = new(h, v);
-                _ = ppos;
-                _ = pos;
                 _ = h;
                 _ = v;
             }
+            _ = ppos;
+            _ = pos;
         }
-        private void Fire() => Missile.Create(MissileObjectIndex switch
-            {
-                1 => Missile.Arrow,
-                2 => Missile.Energy,
-                3 => Missile.Water,
-                _ => Missile.Fireball
-            }).Fire(Player);
+        private void Fire(Vector3 pos) => Missile.Create(Missile.CreateArrow(pos)).Fire(Player);
     }
 }
