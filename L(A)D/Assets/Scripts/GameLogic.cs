@@ -20,6 +20,7 @@ public class GameLogic : MonoBehaviour
     private GameObject E;
     [SerializeField]
     private PlayerLogic player;
+
     private void Update()
     {
         cash.text = $"{Cash}";
