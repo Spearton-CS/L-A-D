@@ -7,19 +7,17 @@ public class PlayerLogic : MonoBehaviour
     private GameObject Menu;
     [SerializeField]
     private GameObject Game;
-    private Animator Anim;
+    [SerializeField]
+    private GameObject missile;
     private Rigidbody2D Body;
     public float Health;
     public float MaxHealth = 100;
-    public float Speed = 1.5F;
-    [SerializeField]
-    private float Damage = 20;
-    [SerializeField]
-    private float DamageRange = 150;
-    [SerializeField]
-    private float DamageCD = 1.2f;
-    public float SpellCD;
-    public float AttackRange => DamageRange;
+    public float Speed = 15F;
+    public float Damage = 10;
+    private float DamageRange = 13;
+    public float SpellSpeed = 20f;
+    public float SpellCD = 2f;
+    private float practicSpellCD = 2f;
     public void Attack(float dmg)
     {
         if (dmg <= 0)
@@ -46,7 +44,6 @@ public class PlayerLogic : MonoBehaviour
     private void Start()
     {
         Body = GetComponent<Rigidbody2D>();
-        Anim = GetComponent<Animator>();
         Health = MaxHealth;
     }
     private void Update()
@@ -58,15 +55,39 @@ public class PlayerLogic : MonoBehaviour
             Time.timeScale = 0;
             return;
         }
-        /*
-         * Логика авто-стрельбы:
-         * 
-         * 1. Чекнуть кд
-         * 
-         * 2. Чекнуть есть ли в радиусе бляди
-         * 
-         * 3. Стрелять
-         */
+        GameObject[] goblins = GameObject.FindGameObjectsWithTag("Enemy");
+        int nearest = 0;
+        bool isCast = false;
+        for (int i = 0; i < goblins.Length; i++)
+        {
+            if (Dist(i, goblins) < Dist(nearest, goblins) && isCast)
+                nearest = i;
+            else if (Dist(i, goblins) <= DamageRange)
+            {
+                isCast = true;
+                nearest = i;
+            }
+        }
         Body.velocity = new(Input.GetAxis("Horizontal") * Speed, Input.GetAxis("Vertical") * Speed);
+        if (!isCast) return;
+        if (practicSpellCD == SpellCD)
+        {
+            Vector3 difference = transform.position - goblins[nearest].transform.position;
+            float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+            missile.transform.rotation = Quaternion.Euler(0, 0, rotZ + 90);
+            missile.transform.position = transform.position;
+            missile.GetComponent<Missile>().Damage = Damage;
+            missile.GetComponent<Missile>().Speed = SpellSpeed;
+            Instantiate(missile);
+            practicSpellCD -= Time.deltaTime;
+        }
+        else if (practicSpellCD > 0f)
+            practicSpellCD -= Time.deltaTime;
+        else
+            practicSpellCD = SpellCD;
+    }
+    private float Dist(int i, GameObject[] obj)
+    {
+        return Vector2.Distance(transform.position, obj[i].transform.position);
     }
 }

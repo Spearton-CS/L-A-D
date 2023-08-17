@@ -22,10 +22,9 @@ public abstract class Enemy : MonoBehaviour
     private protected float DamageRange;
     [SerializeField]
     private protected int Cost;
-    [SerializeField]
-    private GameLogic game;
     private protected float DamageCD = 0.7f;
     #endregion
+    private GameLogic game;
     private protected Rigidbody2D Body;
     private protected CapsuleCollider2D Coll;
     private protected Animator Anim;
@@ -37,6 +36,7 @@ public abstract class Enemy : MonoBehaviour
         Coll = GetComponent<CapsuleCollider2D>();
         Anim = GetComponent<Animator>();
         Player = GameObject.FindGameObjectWithTag("Player");
+        game = GameObject.FindGameObjectWithTag("Game").GetComponent<GameLogic>();
         InternalStart();
     }
     #region Attack & Heal

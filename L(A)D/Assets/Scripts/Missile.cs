@@ -13,7 +13,7 @@ public class Missile : MonoBehaviour
 
     private void Update()
     {
-        if(dieCD < 4.5f) GetComponent<Collider2D>().isTrigger = false;
+        if(dieCD < 4.9f) GetComponent<Collider2D>().isTrigger = false;
         transform.Translate(Vector2.up * Speed * Time.deltaTime);
         dieCD -= Time.deltaTime;
         if(dieCD < 0)
@@ -26,11 +26,12 @@ public class Missile : MonoBehaviour
         if(go.tag != "Player")
         {
             Anim.SetBool("IsDestroy", true);
-            dieCD = 0.35f;
-            if (go.tag == "Enemy")
-                go.GetComponent<Enemies.CloseCombatEnemy>().Attack(Damage);
-            else if (go.tag == "RangeEnemy")
-                go.GetComponent<Enemies.RangedCombatEnemy>().Attack(Damage);
+            GetComponent<Collider2D>().isTrigger = true;
+            dieCD = 0.25f;
+            if (go.GetComponent<CloseCombatEnemy>())
+                go.GetComponent<CloseCombatEnemy>().Attack(Damage);
+            else
+                go.GetComponent<RangedCombatEnemy>().Attack(Damage);
                
         }
         _ = go;

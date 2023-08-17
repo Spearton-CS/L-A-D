@@ -335,10 +335,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Menu: {fileID: 0}
   Game: {fileID: 0}
+  missile: {fileID: 0}
   Health: 0
   MaxHealth: 100
   Speed: 15
-  Damage: 20
+  Damage: 10
+  SpellSpeed: 20
+  SpellCD: 2
 --- !u!114 &-1567425756786852033
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,12 +15,19 @@ public class GameLogic : MonoBehaviour
     [SerializeField]
     private Text[] LightLvls = new Text[5];
     [SerializeField]
-    private PlayerLogic player;
+    private GameObject Upgrades;
     [SerializeField]
-    private GameObject missile;
+    private GameObject E;
+    [SerializeField]
+    private PlayerLogic player;
     private void Update()
     {
         cash.text = $"{Cash}";
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            E.SetActive(!E.activeSelf);
+            Upgrades.SetActive(!Upgrades.activeSelf);
+        }
     }
     public void UpgradeHealth()
     {
@@ -50,19 +57,19 @@ public class GameLogic : MonoBehaviour
             switch (Light[1])
             {
                 case 1:
-                    missile.GetComponent<Missile>().Damage = 10;
+                    player.Damage = 10;
                     break;
                 case 2:
-                    missile.GetComponent<Missile>().Damage = 20;
+                    player.Damage = 20;
                     break;
                 case 3:
-                    missile.GetComponent<Missile>().Damage = 40;
+                    player.Damage = 40;
                     break;
                 case 4:
-                    missile.GetComponent<Missile>().Damage = 60;
+                    player.Damage = 60;
                     break;
                 case 5:
-                    missile.GetComponent<Missile>().Damage = 100;
+                    player.Damage = 100;
                     break;
             }
         }
@@ -98,7 +105,7 @@ public class GameLogic : MonoBehaviour
             Cash -= LightCost[3];
             LightCost[3] *= Light[3] + 3;
             Light[3] += 1;
-            missile.GetComponent<Missile>().Speed += 2f;
+            player.SpellSpeed += 2.25f;
         }
         if (Light[3] == 5)
         {

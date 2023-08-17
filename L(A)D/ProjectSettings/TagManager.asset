@@ -10,6 +10,7 @@ TagManager:
   - RightBorder
   - Missile
   - Enemy
+  - Game
   layers:
   - Default
   - TransparentFX
