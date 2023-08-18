@@ -8,8 +8,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{9DDC96CA-9EB1-B7D0-96FD-84C1BFCB7BA0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -59,10 +58,10 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.5f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Enemies\Missile1.cs" />
     <Compile Include="Assets\Scripts\MenuLogic.cs" />
     <Compile Include="Assets\Scripts\Enemies\CloseCombatEnemy.cs" />
     <Compile Include="Assets\Scripts\PlayerLogic.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Missile1.cs" />
     <Compile Include="Assets\Scripts\MenuUIOnClick.cs" />
     <Compile Include="Assets\Scripts\MainMenuLogic.cs" />
     <Compile Include="Assets\Scripts\MainMenuUIOnClick.cs" />
@@ -71,9 +70,11 @@
     <Compile Include="Assets\Scripts\HistoryLogic.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\GameLogic.cs" />
+    <Compile Include="Assets\Scripts\TheEnd.cs" />
     <Compile Include="Assets\Scripts\PlayerAnimations.cs" />
     <Compile Include="Assets\Scripts\Enemies\RangedCombatEnemy.cs" />
     <Compile Include="Assets\Scripts\CameraHandler.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Boss.cs" />
     <Compile Include="Assets\Scripts\Missile.cs" />
   </ItemGroup>
   <ItemGroup>

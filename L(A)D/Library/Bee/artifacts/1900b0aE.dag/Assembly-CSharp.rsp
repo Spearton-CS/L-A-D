@@ -375,6 +375,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.5f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/BordersLogic.cs"
 "Assets/Scripts/CameraHandler.cs"
+"Assets/Scripts/Enemies/Boss.cs"
 "Assets/Scripts/Enemies/CloseCombatEnemy.cs"
 "Assets/Scripts/Enemies/Enemy.cs"
 "Assets/Scripts/Enemies/EnemyAnimation.cs"
@@ -389,6 +390,7 @@
 "Assets/Scripts/Missile.cs"
 "Assets/Scripts/PlayerAnimations.cs"
 "Assets/Scripts/PlayerLogic.cs"
+"Assets/Scripts/TheEnd.cs"
 -langversion:9.0
 
 /deterministic

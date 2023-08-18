@@ -23,7 +23,7 @@ public class MainMenuUIOnClick : MonoBehaviour
                 Logic.OnExitSettingsClick();
                 break;
             case 4:
-                Logic.OnHistoryExit();
+                //Logic.OnHistoryExit();
                 break;
             default:
                 Logic.OnExitClick();

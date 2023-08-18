@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerLogic : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class PlayerLogic : MonoBehaviour
     private GameObject Game;
     [SerializeField]
     private GameObject missile;
+    [SerializeField]
+    private Text HealthTxt;
     private Rigidbody2D Body;
     public float Health;
     public float MaxHealth = 100;
@@ -48,6 +51,7 @@ public class PlayerLogic : MonoBehaviour
     }
     private void Update()
     {
+        HealthTxt.text = $"{Health}";
         if (Input.GetKey(KeyCode.Escape))
         {
             Game.SetActive(false);

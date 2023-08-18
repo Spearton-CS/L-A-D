@@ -3,8 +3,10 @@
 public abstract class Enemy : MonoBehaviour
 {
     #region Die
+    public bool isDie = false;
     private protected void Die()
     {
+        isDie = true;
         game.Cash += Cost;
         Destroy(gameObject);
     }
