@@ -382,6 +382,7 @@
 "Assets/Scripts/Enemies/Missile1.cs"
 "Assets/Scripts/Enemies/RangedCombatEnemy.cs"
 "Assets/Scripts/GameLogic.cs"
+"Assets/Scripts/Heart.cs"
 "Assets/Scripts/HistoryLogic.cs"
 "Assets/Scripts/MainMenuLogic.cs"
 "Assets/Scripts/MainMenuUIOnClick.cs"

@@ -94,4 +94,12 @@ public class PlayerLogic : MonoBehaviour
     {
         return Vector2.Distance(transform.position, obj[i].transform.position);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Heart")
+        {
+            Heal(10);
+            Destroy(collision.gameObject);
+        }
+    }
 }

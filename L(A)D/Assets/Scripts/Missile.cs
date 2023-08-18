@@ -25,8 +25,8 @@ public class Missile : MonoBehaviour
         if (go.tag != "Player")
         {
             Anim.SetBool("IsDestroy", true);
-            GetComponent<Collider2D>().isTrigger = true;
-            DieCD = 0.2f;
+            Damage /= 2;
+            DieCD = 0.3f;
             if (go.GetComponent<CloseCombatEnemy>())
                 go.GetComponent<CloseCombatEnemy>().Attack(Damage);
             else

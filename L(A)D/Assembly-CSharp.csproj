@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\GameLogic.cs" />
     <Compile Include="Assets\Scripts\TheEnd.cs" />
+    <Compile Include="Assets\Scripts\Heart.cs" />
     <Compile Include="Assets\Scripts\PlayerAnimations.cs" />
     <Compile Include="Assets\Scripts\Enemies\RangedCombatEnemy.cs" />
     <Compile Include="Assets\Scripts\CameraHandler.cs" />

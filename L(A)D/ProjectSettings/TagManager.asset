@@ -11,6 +11,7 @@ TagManager:
   - Missile
   - Enemy
   - Game
+  - Heart
   layers:
   - Default
   - TransparentFX

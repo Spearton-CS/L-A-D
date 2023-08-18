@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class TheEnd : MonoBehaviour
 {
-    private void Start()
+    private void Update()
     {
-        if (PlayerPrefs.HasKey("TheEnd") && PlayerPrefs.GetInt("TheEnd") >= 1)
+        if (PlayerPrefs.HasKey("IsEnd"))
             gameObject.SetActive(true);
+        else
+            gameObject.SetActive(false);
     }
 }

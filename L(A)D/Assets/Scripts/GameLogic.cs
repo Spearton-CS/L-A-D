@@ -35,6 +35,8 @@ public class GameLogic : MonoBehaviour
     private Transform[] Spawners = new Transform[8];
     private int u = 0;
     [SerializeField]
+    private GameObject Heart;
+    [SerializeField]
     private GameObject[] Enemies = new GameObject[5];
     private void Update()
     {
@@ -44,11 +46,14 @@ public class GameLogic : MonoBehaviour
             E.SetActive(!E.activeSelf);
             Upgrades.SetActive(!Upgrades.activeSelf);
         }
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 4; i++)
         {
             if (PracticSpawnCD[i] > 0)
+            {
                 PracticSpawnCD[i] -= Time.deltaTime;
-            if(PracticSpawnCD[i] < 0 && PracticSpawnCD[i] > -1)
+            }
+                
+            if(PracticSpawnCD[i] <= 0 && PracticSpawnCD[i] > -1)
             {
                 Enemies[i].transform.position = Spawners[u++ % 8].position;
                 Instantiate(Enemies[i]);
@@ -66,6 +71,14 @@ public class GameLogic : MonoBehaviour
             Instantiate(Enemies[4]);
             Boss = true;
         }
+        if(GameObject.FindGameObjectsWithTag("Heart").Length < 20)
+        {
+            for (int i = 0; i < 20 - GameObject.FindGameObjectsWithTag("Heart").Length; i++)
+            {
+                Heart.transform.position = new(Random.Range(-290, 290), Random.Range(-290, 290), Heart.transform.position.z);
+                Instantiate(Heart);
+            }
+        }
     }
     // DARK
     public void UpgradeBasic()
@@ -76,8 +89,8 @@ public class GameLogic : MonoBehaviour
             DarkCost[0] *= Dark[0] + 1;
             Dark[0] += 1;
             SpawnCD[0] -= 0.5f;
-            DarkPrices[0].GetComponent<Text>().text = $"Price: {LightCost[0]}";
-            DarkLvls[0].text = $"{Light[0]} LVL";
+            DarkPrices[0].GetComponent<Text>().text = $"Price: {DarkCost[0]}";
+            DarkLvls[0].text = $"{Dark[0]} LVL";
         }
         if (Dark[0] == 5)
         {
@@ -98,8 +111,8 @@ public class GameLogic : MonoBehaviour
                 PracticSpawnCD[1] = 3f;
             }
             SpawnCD[1] -= 0.5f;
-            DarkPrices[1].GetComponent<Text>().text = $"Price: {LightCost[1]}";
-            DarkLvls[1].text = $"{Light[1]} LVL";
+            DarkPrices[1].GetComponent<Text>().text = $"Price: {DarkCost[1]}";
+            DarkLvls[1].text = $"{Dark[1]} LVL";
         }
         if (Dark[1] == 5)
         {
@@ -120,8 +133,9 @@ public class GameLogic : MonoBehaviour
                 PracticSpawnCD[2] = 3f;
             }
             SpawnCD[2] -= 0.5f;
-            DarkPrices[2].GetComponent<Text>().text = $"Price: {LightCost[2]}";
-            DarkLvls[2].text = $"{Light[2]} LVL";
+            DarkPrices[2].GetComponent<Text>().text = $"Price: {DarkCost[2]}";
+            DarkLvls[2].text = $"{Dark[2]} LVL";
+            print(PracticSpawnCD[2]);
         }
         if (Dark[2] == 5)
         {
@@ -142,8 +156,8 @@ public class GameLogic : MonoBehaviour
                 PracticSpawnCD[3] = 3f;
             }
             SpawnCD[3] -= 0.5f;
-            DarkPrices[3].GetComponent<Text>().text = $"Price: {LightCost[3]}";
-            DarkLvls[3].text = $"{Light[3]} LVL";
+            DarkPrices[3].GetComponent<Text>().text = $"Price: {DarkCost[3]}";
+            DarkLvls[3].text = $"{Dark[3]} LVL";
         }
         if (Dark[3] == 5)
         {

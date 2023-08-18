@@ -1204,7 +1204,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  m_BackGroundColor: {r: 0.11372549, g: 0.11372549, b: 0.11372549, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -4658,16 +4658,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67dbda7b63481a54bbbcf5253bf03300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cash: 0
+  Cash: 10000
   SpawnCD:
   - 3
   - -1
   - -1
   - -1
   - -1
-  practicSpawnCD:
+  PracticSpawnCD:
   - 3
-  - -1
   - -1
   - -1
   - -1
@@ -4717,6 +4716,7 @@ MonoBehaviour:
   - {fileID: 1273413872}
   - {fileID: 1852568953}
   - {fileID: 1563164249}
+  Heart: {fileID: 7419190105956322247, guid: f17e1e4e56d65814db6fbd500aa84c66, type: 3}
   Enemies:
   - {fileID: 6390720151807803159, guid: e7556de003291e849855dc774b14a9a8, type: 3}
   - {fileID: 3249325084706457106, guid: 1fa503c302c0f864ebd5a8aa4c221cfc, type: 3}
