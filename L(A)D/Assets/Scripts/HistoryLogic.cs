@@ -1,30 +1,30 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class HistoryLogic : MonoBehaviour
 {
+    private const string Text1 = "Nikita went to Burger King (McDonald's) every day and bought the largest set of food...", Text2 = "And one day the workers of Burger King (McDonald's) refused to sell it to him.", Text3 = "After that he took over the world, becoming the goblin king";
     [SerializeField]
-    private float Cooldown = 2;
-    private Image Box;
+    private Text Text;
     [SerializeField]
-    private Sprite[] Sprites;
-    private float F = 0;
-    private int Step = 0;
-    private void Start() => Box = GetComponent<Image>();
-    private void Update()
+    private MainMenuLogic Logic;
+    private void OnMouseDown()
     {
-        if (Step == Sprites.Length - 1)
+        switch (Text.text)
         {
-            Destroy(this);
-            SceneManager.LoadScene("Game");
+            case Text1:
+                Logic.DoAnim();
+                Text.text = Text2;
+                break;
+            case Text2:
+                Logic.DoAnim();
+                Text.text = Text3;
+                break;
+            case Text3:
+                Logic.DoAnim();
+                Text.text = Text1;
+                Logic.OnHistoryExitClick();
+                break;
         }
-        if (F <= 0)
-        {
-            Box.sprite = Sprites[Step];
-            F = Cooldown;
-        }
-        else
-            F -= Time.deltaTime;
     }
 }

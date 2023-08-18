@@ -1,6 +1,6 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerLogic : MonoBehaviour
 {
@@ -17,10 +17,10 @@ public class PlayerLogic : MonoBehaviour
     public float MaxHealth = 100;
     public float Speed = 15F;
     public float Damage = 10;
-    private float DamageRange = 13;
+    private const float DamageRange = 25;
     public float SpellSpeed = 20f;
     public float SpellCD = 2f;
-    private float practicSpellCD = 2f;
+    private float PracticeSpellCD = 2f;
     public void Attack(float dmg)
     {
         if (dmg <= 0)
@@ -74,7 +74,7 @@ public class PlayerLogic : MonoBehaviour
         }
         Body.velocity = new(Input.GetAxis("Horizontal") * Speed, Input.GetAxis("Vertical") * Speed);
         if (!isCast) return;
-        if (practicSpellCD == SpellCD)
+        if (PracticeSpellCD == SpellCD)
         {
             Vector3 difference = transform.position - goblins[nearest].transform.position;
             float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
@@ -83,12 +83,12 @@ public class PlayerLogic : MonoBehaviour
             missile.GetComponent<Missile>().Damage = Damage;
             missile.GetComponent<Missile>().Speed = SpellSpeed;
             Instantiate(missile);
-            practicSpellCD -= Time.deltaTime;
+            PracticeSpellCD -= Time.deltaTime;
         }
-        else if (practicSpellCD > 0f)
-            practicSpellCD -= Time.deltaTime;
+        else if (PracticeSpellCD > 0f)
+            PracticeSpellCD -= Time.deltaTime;
         else
-            practicSpellCD = SpellCD;
+            PracticeSpellCD = SpellCD;
     }
     private float Dist(int i, GameObject[] obj)
     {

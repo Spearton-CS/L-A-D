@@ -8,7 +8,7 @@ public class CloseCombatEnemy : Enemy
             GoFromPlayer();
         else
             GoToPlayer();
-        if (DamageCD == 1f && canAttack(7))
+        if (DamageCD == 1f && CanAttack(7))
         {
             Player.GetComponent<PlayerLogic>().Attack(Damage);
             Anim.SetBool("Punch", true);

@@ -1,19 +1,32 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MainMenuLogic : MonoBehaviour
 {
     [SerializeField]
-    private GameObject NewGameMenu;
-    [SerializeField]
     private GameObject SettingsMenu;
     [SerializeField]
     private GameObject MainMenu;
+    [SerializeField]
+    private GameObject HistoryMenu;
     [SerializeField]
     private GameObject Animation;
     private float AnimCD = 0f;
     private int AnimState = 0;
     private int NowClick = 0;
+    private void Start()
+    {
+        #region Settings
+        if (PlayerPrefs.HasKey("Volume"))
+        {
+            float vol = PlayerPrefs.GetFloat("Volume");
+            VolumeBar.value = vol;
+            Volume.text = $"Volume: {Mathf.RoundToInt(vol * 100)}";
+            _ = vol;
+        }
+        #endregion
+    }
     private void Update()
     {
         if (AnimState == 1)
@@ -26,6 +39,8 @@ public class MainMenuLogic : MonoBehaviour
                 AnimState = 2;
                 switch (NowClick)
                 {
+                    case -1:
+                        break;
                     case 0:
                         MainMenu.SetActive(false);
                         SceneManager.LoadScene("Game");
@@ -35,12 +50,19 @@ public class MainMenuLogic : MonoBehaviour
                         SettingsMenu.SetActive(true);
                         break;
                     case 2:
+                        MainMenu.SetActive(false);
+                        HistoryMenu.SetActive(true);
+                        break;
+                    case 3:
+                        SettingsMenu.SetActive(false);
                         MainMenu.SetActive(true);
-                        NewGameMenu.SetActive(false);
+                        break;
+                    case 4:
+                        HistoryMenu.SetActive(false);
+                        MainMenu.SetActive(true);
                         break;
                     default:
-                        MainMenu.SetActive(true);
-                        SettingsMenu.SetActive(false);
+                        Application.Quit();
                         break;
                 }
             }
@@ -60,29 +82,49 @@ public class MainMenuLogic : MonoBehaviour
     }
     public void OnNewGameClick() // 0
     {
-        AnimCD = 0.5f;
-        AnimState = 1;
+        DoAnim();
         NowClick = 0;
     }
     public void OnSettingsClick() // 1
     {
-        AnimCD = 0.5f;
-        AnimState = 1;
+        DoAnim();
         NowClick = 1;
     }
     public void OnHistoryClick() // 2
     {
-
+        DoAnim();
+        NowClick = 2;
     }
     public void OnExitSettingsClick() // 3
     {
-        AnimCD = 0.5f;
-        AnimState = 1;
+        DoAnim();
         NowClick = 3;
     }
     public void OnHistoryExitClick() // 4
     {
-
+        DoAnim();
+        NowClick = 4;
     }
-    public void OnExitClick() => Application.Quit(); // ~
+    public void DoAnim()
+    {
+        AnimCD = 0.5f;
+        AnimState = 1;
+        NowClick = -1;
+    }
+    public void OnExitClick()
+    {
+        DoAnim();
+        NowClick = 3;
+    }
+    #region Settings
+    [SerializeField]
+    private Text Volume;
+    [SerializeField]
+    private Scrollbar VolumeBar;
+    public void SetVolume()
+    {
+        PlayerPrefs.SetFloat("Volume", VolumeBar.value);
+        Volume.text = $"Volume: {Mathf.RoundToInt(VolumeBar.value * 100)}";
+    }
+    #endregion
 }

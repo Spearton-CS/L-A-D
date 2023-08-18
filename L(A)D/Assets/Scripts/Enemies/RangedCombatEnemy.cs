@@ -10,7 +10,7 @@ public class RangedCombatEnemy : Enemy
             GoFromPlayer();
         else
             GoToPlayer();
-        if (DamageCD == 1f && canAttack(7))
+        if (DamageCD == 1f && CanAttack(7))
         {
             Vector3 difference = transform.position - Player.transform.position;
             float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;

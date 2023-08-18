@@ -2553,6 +2553,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1534703396}
     - target: {fileID: 7137316263644647964, guid: 22d7bc5f914cc34488505372ef1c04b8, type: 3}
+      propertyPath: Health
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7137316263644647964, guid: 22d7bc5f914cc34488505372ef1c04b8, type: 3}
       propertyPath: missile
       value: 
       objectReference: {fileID: 7478067089213316430, guid: 75aeebb8c82356344be4448f5e68cf97, type: 3}
@@ -4658,7 +4662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67dbda7b63481a54bbbcf5253bf03300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cash: 10000
+  Cash: 0
   SpawnCD:
   - 3
   - -1

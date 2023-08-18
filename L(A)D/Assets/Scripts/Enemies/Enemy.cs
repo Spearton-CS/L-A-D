@@ -42,10 +42,8 @@ public abstract class Enemy : MonoBehaviour
         InternalStart();
     }
     #region Attack & Heal
-    public bool canAttack(LayerMask mask)
-    {
-        return DamageRange/10 + (Coll.size.x + Coll.size.y)/2 + 0.7f >= Vector2.Distance(transform.position, Player.transform.position);
-    }
+    public bool CanAttack(LayerMask mask) => DamageRange / 10 + (Coll.size.x + Coll.size.y) / 2 + 0.7f >= Vector2.Distance(transform.position, Player.transform.position);
+    public bool CanKill(float dmg) => Health <= dmg;
     public void Attack(float dmg)
     {
         if (dmg <= 0)
@@ -63,11 +61,6 @@ public abstract class Enemy : MonoBehaviour
             Health = MaxHealth;
         else
             Health += hp;
-    }
-    private protected virtual void CustomOnCollisionEnter2D(Collision2D collision) { }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-            
     }
     #endregion
     #region Movement

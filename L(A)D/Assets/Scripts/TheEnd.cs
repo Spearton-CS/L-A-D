@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class TheEnd : MonoBehaviour
 {
-    private void Update()
+    [SerializeField]
+    private GameObject Text;
+    private void Start()
     {
-        if (PlayerPrefs.HasKey("IsEnd"))
-            gameObject.SetActive(true);
+        if (PlayerPrefs.HasKey("IsEnd") && PlayerPrefs.GetInt("IsEnd") == 1)
+            Text.SetActive(true);
         else
-            gameObject.SetActive(false);
+            Text.SetActive(false);
     }
 }

@@ -25,13 +25,21 @@ public class Missile : MonoBehaviour
         if (go.tag != "Player")
         {
             Anim.SetBool("IsDestroy", true);
-            Damage /= 2;
             DieCD = 0.3f;
             if (go.GetComponent<CloseCombatEnemy>())
+            {
+                if (!go.GetComponent<CloseCombatEnemy>().CanKill(Damage))
+                    GetComponent<Collider2D>().isTrigger = true;
                 go.GetComponent<CloseCombatEnemy>().Attack(Damage);
+            }
             else
+            {
+                if (!go.GetComponent<RangedCombatEnemy>().CanKill(Damage))
+                    GetComponent<Collider2D>().isTrigger = true;
                 go.GetComponent<RangedCombatEnemy>().Attack(Damage);
+            }
         }
+        Damage /= 2;
         _ = go;
     }
 }
