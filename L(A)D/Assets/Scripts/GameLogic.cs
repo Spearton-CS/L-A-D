@@ -5,8 +5,8 @@ public class GameLogic : MonoBehaviour
 {
     public int Cash;
     public float[] SpawnCD = { 3, -1, -1, -1 };
-    public float[] practicSpawnCD = { 3, -1, -1, -1 };
-    private bool boss = false;
+    public float[] PracticSpawnCD = { 3, -1, -1, -1 };
+    private bool Boss = false;
     [SerializeField]
     private Text cash;
     private int[] Light = { 1, 1, 1, 1, 1 };
@@ -36,7 +36,6 @@ public class GameLogic : MonoBehaviour
     private int u = 0;
     [SerializeField]
     private GameObject[] Enemies = new GameObject[5];
-
     private void Update()
     {
         cash.text = $"{Cash}";
@@ -47,13 +46,13 @@ public class GameLogic : MonoBehaviour
         }
         for (int i = 0; i < 3; i++)
         {
-            if (practicSpawnCD[i] > 0)
-                practicSpawnCD[i] -= Time.deltaTime;
-            if(practicSpawnCD[i] < 0 && practicSpawnCD[i] > -1)
+            if (PracticSpawnCD[i] > 0)
+                PracticSpawnCD[i] -= Time.deltaTime;
+            if(PracticSpawnCD[i] < 0 && PracticSpawnCD[i] > -1)
             {
                 Enemies[i].transform.position = Spawners[u++ % 8].position;
                 Instantiate(Enemies[i]);
-                practicSpawnCD[i] = SpawnCD[i];
+                PracticSpawnCD[i] = SpawnCD[i];
             }
         }
         bool isf = true;
@@ -61,15 +60,13 @@ public class GameLogic : MonoBehaviour
         {
             if (d != 5) isf = false;
         }
-        if (!boss && isf)
+        if (!Boss && isf)
         {
             Enemies[4].transform.position = Spawners[u++ % 8].position;
             Instantiate(Enemies[4]);
-            boss = true;
+            Boss = true;
         }
     }
-
-
     // DARK
     public void UpgradeBasic()
     {
@@ -98,7 +95,7 @@ public class GameLogic : MonoBehaviour
             if (Dark[1] == 1)
             {
                 SpawnCD[1] = 3.5f;
-                practicSpawnCD[1] = 3f;
+                PracticSpawnCD[1] = 3f;
             }
             SpawnCD[1] -= 0.5f;
             DarkPrices[1].GetComponent<Text>().text = $"Price: {LightCost[1]}";
@@ -120,11 +117,11 @@ public class GameLogic : MonoBehaviour
             if (Dark[2] == 1)
             {
                 SpawnCD[2] = 3.5f;
-                practicSpawnCD[2] = 3f;
+                PracticSpawnCD[2] = 3f;
             }
             SpawnCD[2] -= 0.5f;
             DarkPrices[2].GetComponent<Text>().text = $"Price: {LightCost[2]}";
-            DarkLvls[0].text = $"{Light[2]} LVL";
+            DarkLvls[2].text = $"{Light[2]} LVL";
         }
         if (Dark[2] == 5)
         {
@@ -142,7 +139,7 @@ public class GameLogic : MonoBehaviour
             if (Dark[3] == 1)
             {
                 SpawnCD[3] = 3.5f;
-                practicSpawnCD[3] = 3f;
+                PracticSpawnCD[3] = 3f;
             }
             SpawnCD[3] -= 0.5f;
             DarkPrices[3].GetComponent<Text>().text = $"Price: {LightCost[3]}";

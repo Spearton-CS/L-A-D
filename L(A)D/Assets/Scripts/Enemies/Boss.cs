@@ -1,21 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Boss : MonoBehaviour
+public class Boss : CloseCombatEnemy
 {
-    private CloseCombatEnemy script;
-    private void Start()
+    private protected override void BeforeDie()
     {
-        script = GetComponent<CloseCombatEnemy>();
-    }
-    private void Update()
-    {
-        if(script.isDie)
-        {
-            PlayerPrefs.SetInt("IsEnd", 1);
-            SceneManager.LoadScene("MainMenu");
-        }
+        PlayerPrefs.SetInt("IsEnd", 1);
+        SceneManager.LoadScene("MainMenu");
     }
 }
