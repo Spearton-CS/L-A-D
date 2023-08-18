@@ -28,7 +28,7 @@ public class MainMenuLogic : MonoBehaviour
                 {
                     case 0:
                         MainMenu.SetActive(false);
-                        SceneManager.LoadScene("History");
+                        SceneManager.LoadScene("Game");
                         break;
                     case 1:
                         MainMenu.SetActive(false);
@@ -47,7 +47,6 @@ public class MainMenuLogic : MonoBehaviour
             Animation.transform.position = new(-5000 + (1 - AnimCD / 0.5f) * 8000, -1000, -9);
         }
         else if (AnimState == 2)
-        {
             if (AnimCD > 0f)
                 AnimCD -= Time.deltaTime;
             else
@@ -56,7 +55,6 @@ public class MainMenuLogic : MonoBehaviour
                 AnimState = 0;
             }
             Animation.transform.position = new(3000 - (1 - AnimCD / 0.5f) * 8000, -1000, -9);
-        }
     }
     public void OnNewGameClick() // 0
     {
@@ -70,11 +68,19 @@ public class MainMenuLogic : MonoBehaviour
         AnimState = 1;
         NowClick = 1;
     }
-    public void OnExitSettingsClick() // 2
+    public void OnHistoryClick() // 2
+    {
+
+    }
+    public void OnExitSettingsClick() // 3
     {
         AnimCD = 0.5f;
         AnimState = 1;
         NowClick = 3;
     }
-    public void OnExitClick() => Application.Quit(); // 3+
+    public void OnHistoryExitClick() // 4
+    {
+
+    }
+    public void OnExitClick() => Application.Quit(); // ~
 }

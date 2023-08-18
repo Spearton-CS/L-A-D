@@ -17,7 +17,13 @@ public class MainMenuUIOnClick : MonoBehaviour
                 Logic.OnSettingsClick();
                 break;
             case 2:
+                Logic.OnHistoryClick();
+                break;
+            case 3:
                 Logic.OnExitSettingsClick();
+                break;
+            case 4:
+                Logic.OnHistoryExit();
                 break;
             default:
                 Logic.OnExitClick();
