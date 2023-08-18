@@ -2,41 +2,31 @@
 
 public class RangedCombatEnemy : Enemy
 {
+    [SerializeField]
+    private GameObject arrow;
     private void Update()
     {
-        /*
-            * Логика:
-            * 
-            * 1. Дойти до радиуса атаки игрока и подойти еще на 0.1 (или больший) % от радиуса
-            * 
-            * 2. Дрочить метод Fire по кд
-            * 
-            */
-        Vector2 ppos = Player.transform.position;
-        Vector2 pos = transform.position;
-        PlayerLogic logic = Player.GetComponent<PlayerLogic>();
-        float range = 1;
-        if (Vector2.Distance(ppos, pos) <= range)
+        if (Vector2.Distance(Player.transform.position, transform.position) < (Coll.size.x + Coll.size.y) / 2 + DamageRange / 10)
+            GoFromPlayer();
+        else
+            GoToPlayer();
+        if (DamageCD == 1f && canAttack(7))
         {
-            if (false == true) //Проверка кд...
-                return;//Fire(new());
+            Vector3 difference = transform.position - Player.transform.position;
+            float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+            arrow.transform.rotation = Quaternion.Euler(0, 0, rotZ + 90);
+            arrow.transform.position = transform.position;
+            Instantiate(arrow);
+            Anim.SetBool("Punch", true);
+            DamageCD -= Time.deltaTime;
         }
-        else //Поправить движение до радиуса...
+        else if (DamageCD > 0)
         {
-            float h = ppos.x - pos.x, v = ppos.y - pos.y;
-            if (h < 0)
-                h -= range;
-            else
-                h += range;
-            if (v < 0)
-                v -= range;
-            else
-                v += range;
-            Body.velocity = new(h, v);
-            _ = h;
-            _ = v;
+            Anim.SetBool("Punch", false);
+            DamageCD -= Time.deltaTime;
         }
-        _ = ppos;
-        _ = pos;
+        else
+            DamageCD = 1f;
+        Body.velocity = Vector3.zero;
     }
 }

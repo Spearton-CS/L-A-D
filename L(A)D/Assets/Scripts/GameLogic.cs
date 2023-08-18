@@ -20,6 +20,10 @@ public class GameLogic : MonoBehaviour
     private GameObject E;
     [SerializeField]
     private PlayerLogic player;
+    [SerializeField]
+    private Transform[] Spawners = new Transform[8];
+    [SerializeField]
+    private GameObject[] Enemies = new GameObject[5];
 
     private void Update()
     {

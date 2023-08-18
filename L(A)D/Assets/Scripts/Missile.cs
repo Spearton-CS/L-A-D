@@ -13,7 +13,7 @@ public class Missile : MonoBehaviour
 
     private void Update()
     {
-        if(dieCD < 4.9f) GetComponent<Collider2D>().isTrigger = false;
+        if(dieCD < 4.9f && dieCD > 4.8f) GetComponent<Collider2D>().isTrigger = false;
         transform.Translate(Vector2.up * Speed * Time.deltaTime);
         dieCD -= Time.deltaTime;
         if(dieCD < 0)
@@ -27,7 +27,7 @@ public class Missile : MonoBehaviour
         {
             Anim.SetBool("IsDestroy", true);
             GetComponent<Collider2D>().isTrigger = true;
-            dieCD = 0.25f;
+            dieCD = 0.2f;
             if (go.GetComponent<CloseCombatEnemy>())
                 go.GetComponent<CloseCombatEnemy>().Attack(Damage);
             else

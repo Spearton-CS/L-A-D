@@ -107,7 +107,6 @@ MonoBehaviour:
   Speed: 9.5
   DamageRange: 7.5
   Cost: 4
-  game: {fileID: 0}
 --- !u!114 &7823255354033973731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,7 +190,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
