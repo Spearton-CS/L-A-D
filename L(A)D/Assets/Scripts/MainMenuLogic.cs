@@ -114,7 +114,7 @@ public class MainMenuLogic : MonoBehaviour
     public void OnExitClick()
     {
         DoAnim();
-        NowClick = 3;
+        NowClick = 5;
     }
     #region Settings
     [SerializeField]

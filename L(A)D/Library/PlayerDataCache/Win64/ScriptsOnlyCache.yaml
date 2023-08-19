@@ -50,10 +50,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -154,47 +152,47 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1612}
     - Class: 114
-      Script: {instanceID: 2854}
+      Script: {instanceID: 2782}
     - Class: 114
-      Script: {instanceID: 3106}
+      Script: {instanceID: 2860}
     - Class: 114
-      Script: {instanceID: 3452}
+      Script: {instanceID: 3112}
     - Class: 114
-      Script: {instanceID: 6298}
+      Script: {instanceID: 3458}
     - Class: 114
-      Script: {instanceID: 6682}
+      Script: {instanceID: 3580}
     - Class: 114
-      Script: {instanceID: 7298}
+      Script: {instanceID: 3882}
     - Class: 114
-      Script: {instanceID: 9654}
+      Script: {instanceID: 4230}
     - Class: 114
-      Script: {instanceID: 9662}
+      Script: {instanceID: 4760}
     - Class: 114
-      Script: {instanceID: 9670}
+      Script: {instanceID: 5228}
     - Class: 114
-      Script: {instanceID: 9674}
+      Script: {instanceID: 5958}
     - Class: 114
-      Script: {instanceID: 9678}
+      Script: {instanceID: 6318}
     - Class: 114
-      Script: {instanceID: 9682}
+      Script: {instanceID: 6702}
     - Class: 114
-      Script: {instanceID: 9686}
+      Script: {instanceID: 6716}
     - Class: 114
-      Script: {instanceID: 9690}
+      Script: {instanceID: 7324}
     - Class: 114
-      Script: {instanceID: 9694}
+      Script: {instanceID: 7338}
     - Class: 114
-      Script: {instanceID: 9698}
+      Script: {instanceID: 7672}
     - Class: 114
-      Script: {instanceID: 9706}
+      Script: {instanceID: 8188}
     - Class: 114
-      Script: {instanceID: 9714}
+      Script: {instanceID: 8520}
     - Class: 114
-      Script: {instanceID: 9718}
+      Script: {instanceID: 8678}
     - Class: 114
-      Script: {instanceID: 9730}
+      Script: {instanceID: 8928}
     - Class: 114
-      Script: {instanceID: 25684}
+      Script: {instanceID: 9312}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -239,31 +237,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1612}
     - Class: 114
-      Script: {instanceID: 2854}
+      Script: {instanceID: 2340}
     - Class: 114
-      Script: {instanceID: 3106}
+      Script: {instanceID: 2622}
     - Class: 114
-      Script: {instanceID: 6298}
+      Script: {instanceID: 2860}
     - Class: 114
-      Script: {instanceID: 6682}
+      Script: {instanceID: 3112}
     - Class: 114
-      Script: {instanceID: 7298}
+      Script: {instanceID: 6076}
     - Class: 114
-      Script: {instanceID: 7306}
+      Script: {instanceID: 6318}
     - Class: 114
-      Script: {instanceID: 9666}
+      Script: {instanceID: 6702}
     - Class: 114
-      Script: {instanceID: 9702}
+      Script: {instanceID: 7304}
     - Class: 114
-      Script: {instanceID: 9710}
+      Script: {instanceID: 7324}
     - Class: 114
-      Script: {instanceID: 9722}
+      Script: {instanceID: 7332}
     - Class: 114
-      Script: {instanceID: 9734}
+      Script: {instanceID: 8822}
     - Class: 114
-      Script: {instanceID: 25684}
+      Script: {instanceID: 9312}
     - Class: 114
-      Script: {instanceID: 25884}
+      Script: {instanceID: 26276}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -357,6 +355,12 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
+      Hash: cdafbc82032eacaa2452249526ebaf3c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MainMenuLogic
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -411,10 +415,22 @@ ScriptsOnlyBuild:
     className: SkeletonAsset
   - hash:
       serializedVersion: 2
+      Hash: 756aaa590a87695718f5d65d508f1931
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SkipHistory
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnBecameVisibleMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ObjectAnimations
   - hash:
       serializedVersion: 2
       Hash: bcdedb1b3a567eb05111be4716618ce1
@@ -555,6 +571,12 @@ ScriptsOnlyBuild:
     className: UnityOnMouseDownMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 5d0d87848f14213cf1122a3c58ba2660
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlayerLogic
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -603,6 +625,12 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
+      Hash: 4f84265174d7c67a923c2d2a4a6c505f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: RangedCombatEnemy
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
@@ -643,6 +671,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Flow
     namespaceName: Unity.VisualScripting
     className: ScriptGraphAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 6847d2b8116eecc0db65737366c92b9c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Missile1
   - hash:
       serializedVersion: 2
       Hash: 0286ed84936a6e3c4dba049ae21a7b1c
@@ -717,6 +751,12 @@ ScriptsOnlyBuild:
     className: TMP_Settings
   - hash:
       serializedVersion: 2
+      Hash: 948d8db40253a86df2423551b69df418
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MenuLogic
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -751,6 +791,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Tilemap.Extras
     namespaceName: UnityEngine.Tilemaps
     className: AnimatedTile
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Heart
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -873,10 +919,22 @@ ScriptsOnlyBuild:
     className: UnityOnTriggerExitMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 6e524dcae095fd3da513014ae78acf3c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MenuUIOnClick
+  - hash:
+      serializedVersion: 2
       Hash: 1b4a83f2a2f1a4def12cdc9223cce72c
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TMP_FontAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 8d89070b3cfd1bb629e13ddd816753f4
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MainMenuUIOnClick
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -927,6 +985,12 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
+      Hash: 52d0ed5b95ca8d3dc3fd4326e48f4cb7
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Boss
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -957,6 +1021,12 @@ ScriptsOnlyBuild:
     className: UnityOnTriggerStay2DMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 06b6864a59e63a501f0321502dde2c66
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TheEnd
+  - hash:
+      serializedVersion: 2
       Hash: 751d867553f413cde86fe5db0b02780d
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
@@ -967,6 +1037,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Scrollbar
+  - hash:
+      serializedVersion: 2
+      Hash: 182319e650811b464bcab978659d8347
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GameLogic
   - hash:
       serializedVersion: 2
       Hash: df70afff09fcc26f54fe08084e6042ec
@@ -1003,6 +1079,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: EnemyAnimation
   - hash:
       serializedVersion: 2
       Hash: a80737d727a1b0096e93ca948844ce4b
@@ -1101,6 +1183,12 @@ ScriptsOnlyBuild:
     className: UnityOnScrollRectValueChangedMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 6847d2b8116eecc0db65737366c92b9c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Missile
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -1143,6 +1231,12 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: 29438dfb7df1d0350ccba1916fbd04bd
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: BordersLogic
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1161,10 +1255,28 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
+      Hash: b1929bc0311df2b527195dc9d5c2183d
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CameraHandler
+  - hash:
+      serializedVersion: 2
       Hash: 1acffdc47de1ca014dae3d384c3d1086
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: 0439422904f1c570a3751457d85f2479
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: HistoryLogic
+  - hash:
+      serializedVersion: 2
+      Hash: 52d0ed5b95ca8d3dc3fd4326e48f4cb7
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CloseCombatEnemy
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1221,6 +1333,12 @@ ScriptsOnlyBuild:
     className: SpriteLibrarySourceAsset
   - hash:
       serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Music
+  - hash:
+      serializedVersion: 2
       Hash: afe1800287c9574079eab3fea2622416
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -1267,128 +1385,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 52d0ed5b95ca8d3dc3fd4326e48f4cb7
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: CloseCombatEnemy
-  - hash:
-      serializedVersion: 2
-      Hash: 52d0ed5b95ca8d3dc3fd4326e48f4cb7
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Boss
-  - hash:
-      serializedVersion: 2
-      Hash: cdafbc82032eacaa2452249526ebaf3c
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: MainMenuLogic
-  - hash:
-      serializedVersion: 2
-      Hash: 6e524dcae095fd3da513014ae78acf3c
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: MenuUIOnClick
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ObjectAnimations
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: EnemyAnimation
-  - hash:
-      serializedVersion: 2
-      Hash: 29438dfb7df1d0350ccba1916fbd04bd
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: BordersLogic
-  - hash:
-      serializedVersion: 2
-      Hash: 4f84265174d7c67a923c2d2a4a6c505f
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: RangedCombatEnemy
-  - hash:
-      serializedVersion: 2
-      Hash: b1929bc0311df2b527195dc9d5c2183d
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: CameraHandler
-  - hash:
-      serializedVersion: 2
-      Hash: 948d8db40253a86df2423551b69df418
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: MenuLogic
-  - hash:
-      serializedVersion: 2
-      Hash: 182319e650811b464bcab978659d8347
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: GameLogic
-  - hash:
-      serializedVersion: 2
-      Hash: 06b6864a59e63a501f0321502dde2c66
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: TheEnd
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Heart
-  - hash:
-      serializedVersion: 2
-      Hash: 756aaa590a87695718f5d65d508f1931
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: SkipHistory
-  - hash:
-      serializedVersion: 2
-      Hash: 6847d2b8116eecc0db65737366c92b9c
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Missile
-  - hash:
-      serializedVersion: 2
-      Hash: 5d0d87848f14213cf1122a3c58ba2660
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PlayerLogic
-  - hash:
-      serializedVersion: 2
-      Hash: 8d89070b3cfd1bb629e13ddd816753f4
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: MainMenuUIOnClick
-  - hash:
-      serializedVersion: 2
-      Hash: 6847d2b8116eecc0db65737366c92b9c
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Missile1
-  - hash:
-      serializedVersion: 2
-      Hash: 0439422904f1c570a3751457d85f2479
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: HistoryLogic
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Music
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Game.unity
-  playerPath: C:/Games/L(A)D.exe
+  playerPath: C:/Games/L(A)D/MonoBleedingEdge/L(A)D.exe
