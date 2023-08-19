@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\MenuLogic.cs" />
+    <Compile Include="Assets\Scripts\SkipHistory.cs" />
     <Compile Include="Assets\Scripts\Enemies\CloseCombatEnemy.cs" />
     <Compile Include="Assets\Scripts\PlayerLogic.cs" />
     <Compile Include="Assets\Scripts\Enemies\Missile1.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Assets\Scripts\PlayerAnimations.cs" />
     <Compile Include="Assets\Scripts\Enemies\RangedCombatEnemy.cs" />
     <Compile Include="Assets\Scripts\CameraHandler.cs" />
+    <Compile Include="Assets\Scripts\Music.cs" />
     <Compile Include="Assets\Scripts\Enemies\Boss.cs" />
     <Compile Include="Assets\Scripts\Missile.cs" />
   </ItemGroup>

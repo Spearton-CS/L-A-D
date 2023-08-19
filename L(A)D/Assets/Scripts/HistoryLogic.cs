@@ -8,22 +8,38 @@ public class HistoryLogic : MonoBehaviour
     private Text Text;
     [SerializeField]
     private MainMenuLogic Logic;
+    private int nowText = 1;
+    private float textCD = -1;
+    private void Update()
+    {
+        if (textCD > 0)
+            textCD -= Time.deltaTime;
+        else if (textCD > -1)
+        {
+            if(nowText == 1)
+                Text.text = Text2;
+            else
+                Text.text = Text3;
+        }
+            
+
+    }
     private void OnMouseDown()
     {
         switch (Text.text)
         {
             case Text1:
                 Logic.DoAnim();
-                Text.text = Text2;
+                textCD = 0.5f;
                 break;
             case Text2:
                 Logic.DoAnim();
-                Text.text = Text3;
+                textCD = 0.5f;
+                nowText = 2;
                 break;
             case Text3:
-                Logic.DoAnim();
-                Text.text = Text1;
                 Logic.OnHistoryExitClick();
+                Text.text = Text1;
                 break;
         }
     }

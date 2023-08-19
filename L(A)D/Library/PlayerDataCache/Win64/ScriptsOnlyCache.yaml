@@ -15,9 +15,11 @@ ScriptsOnlyBuild:
     - MenuUIOnClick
     - Missile
     - Missile1
+    - Music
     - ObjectAnimations
     - PlayerLogic
     - RangedCombatEnemy
+    - SkipHistory
     - TheEnd
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -137,6 +139,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -146,47 +152,49 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1610}
+      Script: {instanceID: 1612}
     - Class: 114
-      Script: {instanceID: 2848}
+      Script: {instanceID: 2854}
     - Class: 114
-      Script: {instanceID: 3096}
+      Script: {instanceID: 3106}
     - Class: 114
-      Script: {instanceID: 3442}
+      Script: {instanceID: 3452}
     - Class: 114
-      Script: {instanceID: 3558}
+      Script: {instanceID: 6298}
     - Class: 114
-      Script: {instanceID: 5190}
+      Script: {instanceID: 6682}
     - Class: 114
-      Script: {instanceID: 6268}
+      Script: {instanceID: 7298}
     - Class: 114
-      Script: {instanceID: 6642}
+      Script: {instanceID: 9654}
     - Class: 114
-      Script: {instanceID: 6656}
+      Script: {instanceID: 9662}
     - Class: 114
-      Script: {instanceID: 7256}
+      Script: {instanceID: 9670}
     - Class: 114
-      Script: {instanceID: 7270}
+      Script: {instanceID: 9674}
     - Class: 114
-      Script: {instanceID: 8114}
+      Script: {instanceID: 9678}
+    - Class: 114
+      Script: {instanceID: 9682}
+    - Class: 114
+      Script: {instanceID: 9686}
+    - Class: 114
+      Script: {instanceID: 9690}
+    - Class: 114
+      Script: {instanceID: 9694}
+    - Class: 114
+      Script: {instanceID: 9698}
+    - Class: 114
+      Script: {instanceID: 9706}
+    - Class: 114
+      Script: {instanceID: 9714}
+    - Class: 114
+      Script: {instanceID: 9718}
     - Class: 114
       Script: {instanceID: 9730}
     - Class: 114
-      Script: {instanceID: 9754}
-    - Class: 114
-      Script: {instanceID: 9758}
-    - Class: 114
-      Script: {instanceID: 9766}
-    - Class: 114
-      Script: {instanceID: 9770}
-    - Class: 114
-      Script: {instanceID: 9786}
-    - Class: 114
-      Script: {instanceID: 9794}
-    - Class: 114
-      Script: {instanceID: 9814}
-    - Class: 114
-      Script: {instanceID: 9850}
+      Script: {instanceID: 25684}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -222,30 +230,40 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1610}
+      Script: {instanceID: 1612}
     - Class: 114
-      Script: {instanceID: 2848}
+      Script: {instanceID: 2854}
     - Class: 114
-      Script: {instanceID: 3096}
+      Script: {instanceID: 3106}
     - Class: 114
-      Script: {instanceID: 6268}
+      Script: {instanceID: 6298}
     - Class: 114
-      Script: {instanceID: 6642}
+      Script: {instanceID: 6682}
     - Class: 114
-      Script: {instanceID: 7256}
+      Script: {instanceID: 7298}
     - Class: 114
-      Script: {instanceID: 7264}
+      Script: {instanceID: 7306}
     - Class: 114
-      Script: {instanceID: 9738}
+      Script: {instanceID: 9666}
     - Class: 114
-      Script: {instanceID: 9838}
+      Script: {instanceID: 9702}
     - Class: 114
-      Script: {instanceID: 9846}
+      Script: {instanceID: 9710}
     - Class: 114
-      Script: {instanceID: 9866}
+      Script: {instanceID: 9722}
+    - Class: 114
+      Script: {instanceID: 9734}
+    - Class: 114
+      Script: {instanceID: 25684}
+    - Class: 114
+      Script: {instanceID: 25884}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -537,12 +555,6 @@ ScriptsOnlyBuild:
     className: UnityOnMouseDownMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 5d0d87848f14213cf1122a3c58ba2660
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PlayerLogic
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -742,12 +754,6 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Heart
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnPointerClickMessageListener
@@ -921,12 +927,6 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: 52d0ed5b95ca8d3dc3fd4326e48f4cb7
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Boss
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -967,12 +967,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Scrollbar
-  - hash:
-      serializedVersion: 2
-      Hash: 182319e650811b464bcab978659d8347
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: GameLogic
   - hash:
       serializedVersion: 2
       Hash: df70afff09fcc26f54fe08084e6042ec
@@ -1105,12 +1099,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnScrollRectValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 6847d2b8116eecc0db65737366c92b9c
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Missile
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1287,6 +1275,12 @@ ScriptsOnlyBuild:
     className: CloseCombatEnemy
   - hash:
       serializedVersion: 2
+      Hash: 52d0ed5b95ca8d3dc3fd4326e48f4cb7
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Boss
+  - hash:
+      serializedVersion: 2
       Hash: cdafbc82032eacaa2452249526ebaf3c
     assemblyName: Assembly-CSharp
     namespaceName: 
@@ -1335,10 +1329,40 @@ ScriptsOnlyBuild:
     className: MenuLogic
   - hash:
       serializedVersion: 2
+      Hash: 182319e650811b464bcab978659d8347
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GameLogic
+  - hash:
+      serializedVersion: 2
       Hash: 06b6864a59e63a501f0321502dde2c66
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: TheEnd
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Heart
+  - hash:
+      serializedVersion: 2
+      Hash: 756aaa590a87695718f5d65d508f1931
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SkipHistory
+  - hash:
+      serializedVersion: 2
+      Hash: 6847d2b8116eecc0db65737366c92b9c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Missile
+  - hash:
+      serializedVersion: 2
+      Hash: 5d0d87848f14213cf1122a3c58ba2660
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlayerLogic
   - hash:
       serializedVersion: 2
       Hash: 8d89070b3cfd1bb629e13ddd816753f4
@@ -1357,8 +1381,14 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: HistoryLogic
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Music
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Game.unity
-  playerPath: C:/Games/L(A)D/L(A)D.exe
+  playerPath: C:/Games/L(A)D.exe

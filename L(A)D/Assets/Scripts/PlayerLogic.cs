@@ -66,7 +66,7 @@ public class PlayerLogic : MonoBehaviour
         {
             if (Dist(i, goblins) < Dist(nearest, goblins) && isCast)
                 nearest = i;
-            else if (Dist(i, goblins) <= DamageRange)
+            else if (!isCast && Dist(i, goblins) <= DamageRange)
             {
                 isCast = true;
                 nearest = i;

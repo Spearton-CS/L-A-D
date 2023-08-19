@@ -12,8 +12,12 @@ public class Missile : MonoBehaviour
     }
     private void Update()
     {
-        if (DieCD < 4.95f && DieCD > 4.9f)
-            GetComponent<Collider2D>().isTrigger = false;
+        if(Mathf.Abs(transform.rotation.z) <= 40 || Mathf.Abs(transform.rotation.z) >= 140)
+            if (DieCD < 4.9f && DieCD > 4.8f)
+                GetComponent<Collider2D>().isTrigger = false;
+        else
+            if (DieCD < 4.95f && DieCD > 4.9f)
+                GetComponent<Collider2D>().isTrigger = false;
         transform.Translate(Vector2.up * Speed * Time.deltaTime);
         DieCD -= Time.deltaTime;
         if (DieCD < 0)

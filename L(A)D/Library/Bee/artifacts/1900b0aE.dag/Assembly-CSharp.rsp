@@ -389,8 +389,10 @@
 "Assets/Scripts/MenuLogic.cs"
 "Assets/Scripts/MenuUIOnClick.cs"
 "Assets/Scripts/Missile.cs"
+"Assets/Scripts/Music.cs"
 "Assets/Scripts/PlayerAnimations.cs"
 "Assets/Scripts/PlayerLogic.cs"
+"Assets/Scripts/SkipHistory.cs"
 "Assets/Scripts/TheEnd.cs"
 -langversion:9.0
 
